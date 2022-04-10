@@ -57,4 +57,14 @@
   <ItemGroup>
     <Folder Include="Properties" />
   </ItemGroup>
+  <ItemGroup>
+    <Build Include="Student.sql" />
+    <Build Include="Course.sql" />
+    <Build Include="StudentTakes.sql" />
+    <Build Include="Staff.sql" />
+    <Build Include="StaffTeaches.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="EastWood Public School.refactorlog" />
+  </ItemGroup>
 </Project>
