@@ -70,4 +70,7 @@
   <ItemGroup>
     <RefactorLog Include="BelleWood Public School.refactorlog" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="InsertScript.sql" />
+  </ItemGroup>
 </Project>
