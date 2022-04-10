@@ -7,5 +7,6 @@
     [DOB] DATE NULL, 
     [Address] VARCHAR(50) NULL, 
     [Email] VARCHAR(50) NULL, 
+    MobileNumber VARCHAR(15) NULL,
     [Gender] VARCHAR(2) NULL
 )
