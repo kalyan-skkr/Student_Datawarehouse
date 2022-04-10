@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StudentDataWarehouse", "StudentDataWarehouse\StudentDataWarehouse.sqlproj", "{6C120656-99DF-4EC9-A3D4-A752932D7492}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EastWood Public School", "EastWood Public School\EastWood Public School.sqlproj", "{799485BE-DD32-46C3-8433-33CD8D02233A}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "School DWH", "School DWH\School DWH.sqlproj", "{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "BelleWood Public School", "BelleWood Public School\BelleWood Public School.sqlproj", "{6C120656-99DF-4EC9-A3D4-A752932D7492}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,6 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{799485BE-DD32-46C3-8433-33CD8D02233A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{799485BE-DD32-46C3-8433-33CD8D02233A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{799485BE-DD32-46C3-8433-33CD8D02233A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{799485BE-DD32-46C3-8433-33CD8D02233A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{799485BE-DD32-46C3-8433-33CD8D02233A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{799485BE-DD32-46C3-8433-33CD8D02233A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9BD050E-8AFF-4904-9AC5-60825E7D4B9D}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{6C120656-99DF-4EC9-A3D4-A752932D7492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6C120656-99DF-4EC9-A3D4-A752932D7492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C120656-99DF-4EC9-A3D4-A752932D7492}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
