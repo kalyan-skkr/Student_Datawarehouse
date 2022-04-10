@@ -3,16 +3,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>StudentDataWarehouse</Name>
+    <Name>EastWood_Public_School</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{6c120656-99df-4ec9-a3d4-a752932d7492}</ProjectGuid>
+    <ProjectGuid>{799485be-dd32-46c3-8433-33cd8d02233a}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>StudentDataWarehouse</RootNamespace>
-    <AssemblyName>StudentDataWarehouse</AssemblyName>
+    <RootNamespace>EastWood_Public_School</RootNamespace>
+    <AssemblyName>EastWood_Public_School</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
