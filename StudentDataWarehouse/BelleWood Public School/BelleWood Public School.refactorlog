@@ -14,4 +14,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="StaffCourseId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="7cc7cb50-1343-453c-afac-748008950fce" ChangeDateTime="04/10/2022 22:17:23">
+    <Property Name="ElementName" Value="[dbo].[FK_CourseEnrollment_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CourseEnrollment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_CourseEnrollment_Course]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="cb9f5086-599a-49e7-8f29-ab55eff3b60a" ChangeDateTime="04/10/2022 22:17:52">
+    <Property Name="ElementName" Value="[dbo].[FK_CourseEnrollment_Course]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[CourseEnrollment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_CourseEnrollment_Course_CourseId]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d17873e4-c9e2-4ab4-bc17-f2905902b276" ChangeDateTime="04/10/2022 22:22:18">
+    <Property Name="ElementName" Value="[dbo].[ExtraCurricularEnrollment].[Qualification]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ExtraCurricularEnrollment]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Qualified" />
+  </Operation>
 </Operations>

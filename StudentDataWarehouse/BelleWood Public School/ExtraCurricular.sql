@@ -4,3 +4,7 @@
 	[ExtraCurricularName] VARCHAR(20) NOT NULL
 
 )
+
+GO
+
+CREATE INDEX [IX_ExtraCurricular_Column] ON [dbo].[ExtraCurricular] ([ExtraCurricularId])
