@@ -7,3 +7,7 @@
     [ContactNumber] VARCHAR(10) NOT NULL, 
     [Email] VARCHAR(30) NOT NULL
 )
+
+GO
+
+CREATE INDEX [IX_Student_Column] ON [dbo].[Student] ([StdId])

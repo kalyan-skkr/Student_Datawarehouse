@@ -10,3 +10,7 @@
     [Address] VARCHAR(10) NOT NULL,
 
 )
+
+GO
+
+CREATE INDEX [IX_Staff_Column] ON [dbo].[Staff] ([StaffId])

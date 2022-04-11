@@ -6,3 +6,7 @@
     [Email] VARCHAR(30) NOT NULL, 
     [Rating] DECIMAL NULL
 )
+
+GO
+
+CREATE INDEX [IX_Staff_Column] ON [dbo].[Staff] ([StaffId])
