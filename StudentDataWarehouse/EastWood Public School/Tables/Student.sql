@@ -5,5 +5,10 @@
     [Age] INT NOT NULL, 
     [Address] VARCHAR(10) NOT NULL, 
     [ContactNumber] VARCHAR(10) NOT NULL, 
-    [Email] VARCHAR(30) NOT NULL
+    [Email] VARCHAR(30) NOT NULL, 
+    [GradePointAverage] DECIMAL NULL
 )
+
+GO
+
+CREATE INDEX [IX_Student_Column] ON [dbo].[Student] ([StdId])

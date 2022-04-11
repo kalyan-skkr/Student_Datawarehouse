@@ -9,3 +9,9 @@
     [DateOfBirth] DATE NOT NULL, 
     [GPA] INT NULL
 )
+
+
+
+GO
+
+CREATE INDEX [IX_Student_Column] ON [dbo].[Student] ([StudentId])
