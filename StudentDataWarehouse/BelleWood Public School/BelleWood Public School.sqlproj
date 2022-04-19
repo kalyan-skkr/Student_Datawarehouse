@@ -64,9 +64,9 @@
     <Build Include="Tables\Course.sql" />
     <Build Include="Tables\CourseEnrollment.sql" />
     <None Include="Tables\InsertScript.sql" />
-    <Build Include="Tables\Staff.sql" />
-    <Build Include="Tables\StaffCourses.sql" />
     <Build Include="Tables\Student.sql" />
+    <Build Include="Tables\Address.sql" />
+    <Build Include="Tables\Admissions.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="BelleWood Public School.refactorlog" />

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Region]
+(
+	[RegionId] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[City] VARCHAR(20) NOT NULL,
+	[Country] VARCHAR(20) NOT NULL
+)

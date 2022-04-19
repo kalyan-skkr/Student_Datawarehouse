@@ -60,11 +60,11 @@
     <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\StudentTakes.sql" />
-    <Build Include="Tables\Course.sql" />
     <None Include="Tables\InsertScript.sql" />
-    <Build Include="Tables\Staff.sql" />
-    <Build Include="Tables\StaffTeaches.sql" />
+    <Build Include="Tables\Address.sql" />
+    <Build Include="Tables\Admissions.sql" />
+    <Build Include="Tables\Course.sql" />
+    <Build Include="Tables\CourseEnrollment.sql" />
     <Build Include="Tables\Student.sql" />
   </ItemGroup>
   <ItemGroup>

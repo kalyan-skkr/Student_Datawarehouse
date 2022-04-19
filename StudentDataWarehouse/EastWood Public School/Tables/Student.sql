@@ -1,14 +1,15 @@
 ﻿CREATE TABLE [dbo].[Student]
 (
-	[StdId] INT NOT NULL PRIMARY KEY IDENTITY(1100,1), 
-    [StdName] VARCHAR(50) NOT NULL, 
-    [Age] INT NOT NULL, 
-    [Address] VARCHAR(10) NOT NULL, 
-    [ContactNumber] VARCHAR(10) NOT NULL, 
-    [Email] VARCHAR(30) NOT NULL, 
-    [GradePointAverage] DECIMAL NULL
+	[StudentId] INT NOT NULL PRIMARY KEY IDENTITY(10000,1), 
+    [FirstName] VARCHAR(20) NOT NULL, 
+    [MiddleName] VARCHAR(20) NULL,
+    [LastName] VARCHAR(20) NOT NULL, 
+    [Gender] VARCHAR(2) NOT NULL, 
+    [DateOfBirth] DATE NOT NULL 
 )
+
+
 
 GO
 
-CREATE INDEX [IX_Student_Column] ON [dbo].[Student] ([StdId])
+CREATE INDEX [IX_Student_Column] ON [dbo].[Student] ([StudentId])

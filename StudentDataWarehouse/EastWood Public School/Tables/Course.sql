@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [dbo].[Course]
 (
-	[CId] INT NOT NULL PRIMARY KEY, 
-    [CName] VARCHAR(20) NULL
+	[CourseId] INT NOT NULL PRIMARY KEY IDENTITY(2000,1), 
+    [CourseName] VARCHAR(20) NULL
 )
 
 GO
 
-CREATE INDEX [IX_Course_Column] ON [dbo].[Course] ([CId])
+CREATE INDEX [IX_Course_Column] ON [dbo].[Course] ([CourseId])
