@@ -6,8 +6,7 @@
     [LastName] VARCHAR(20) NOT NULL, 
     [CurrentGrade] INT NOT NULL, 
     [Gender] VARCHAR(2) NOT NULL, 
-    [DateOfBirth] DATE NOT NULL, 
-    [GPA] INT NULL
+    [DateOfBirth] DATE NOT NULL 
 )
 
 

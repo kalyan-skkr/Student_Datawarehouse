@@ -7,16 +7,3 @@
 )
 
 GO
-
-CREATE TRIGGER [dbo].[Trigger_StaffTeaches]
-    ON [dbo].[StaffTeaches]
-    FOR DELETE, INSERT, UPDATE
-    AS
-    BEGIN
-        SET NoCount ON
-
-        IF UPDATE(RATING)
-        BEGIN
-            EXEC UpdateStaffRating
-        END
-    END

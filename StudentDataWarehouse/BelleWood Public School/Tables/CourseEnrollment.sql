@@ -10,16 +10,3 @@
 )
 
 GO
-
-CREATE TRIGGER [dbo].[Trigger_CourseEnrollment]
-    ON [dbo].[CourseEnrollment]
-    FOR UPDATE
-    AS
-    BEGIN
-        SET NoCount ON
-
-        IF UPDATE(GRADE)
-        BEGIN
-            EXEC [dbo].[UpdateGpa]
-        END
-    END

@@ -7,15 +7,3 @@
 )
 
 GO
-
-CREATE TRIGGER [dbo].[Trigger_StudentTakes]
-    ON [dbo].[StudentTakes]
-    FOR UPDATE
-    AS
-    BEGIN
-        SET NoCount ON
-        IF UPDATE(GRADEPOINT)
-        BEGIN
-            EXEC UpdateGpa
-        END
-    END
