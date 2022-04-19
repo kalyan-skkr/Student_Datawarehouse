@@ -9,15 +9,3 @@
 )
 
 GO
-
-CREATE TRIGGER [dbo].[Trigger_StaffCourses]
-    ON [dbo].[StaffCourses]
-    FOR UPDATE
-    AS
-    BEGIN
-        SET NoCount ON
-        IF UPDATE(RATING)
-        BEGIN
-            EXEC [dbo].[UpdateStaffRating]
-        END
-    END
