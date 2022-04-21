@@ -26,17 +26,17 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-S3M7KTH</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtO1I2lxo+k2LZDNO27FIYwAAAAACAAAAAAAQZgAAAAEAACAAAAATN7ggamE4mQq32beLrwVCopBW4LVdrSzJPvXigm0wugAAAAAOgAAAAAIAACAAAAAO5uDUd6jgYxZ4UezAgzZfJsCn5PN4dvw3JeVg+pVENJAAAABnXJog6zsIm/xn2mO+Om2YPemMmfSkXYO6gJqCYXc5rOX3imtlZFzczPne+iasbjU+Bk02RwLctwQ0PCZOz45Ipvl/wEqvVfY08TplpXAm4Uv5t8Panc6Wne3IicKX4CCdckF6KMYB3P61n25zO3sX97XT6fjFplTuSsk2aa5EhXlc4C4brE5pgYhuoeThHuxAAAAAiyjX3cMDsFDRu5q8oby3lafsLyekhgt7chJNXe0XUTwt3o0vArhOFvGGsBtJHZ8hODE9YSbOdHsBz8u8C8VwUQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtO1I2lxo+k2LZDNO27FIYwAAAAACAAAAAAAQZgAAAAEAACAAAADoANkJ3yXscB7msZ8LDnerX/rZyUajxMj9mXFeUi89TgAAAAAOgAAAAAIAACAAAAArOymEBt/sSyuId9ft14N7XgDNUYhqmjY9yaT6zOmfP5AAAABppWaXwLcMFcRhoSNok/OckJOl4UcYMCdEfWr6+wagtguRS3GrNwzeshxk/od6lDK6bC4jFcMtPTfNhtuEVyKBVhTOdzLzezOpzj9XDiGA1AtB3E7UA6Bz3vvNV39st/8y/m/aXcjOrZsPMnxYBGivZaHhIn/kkmcrQ9BEGCLPtHCtUDRpKfRqruPvHY4INKFAAAAAin6wcJqfMvqKXwb18SNY2YPU9KZCBFQXI0GTFsKY+f/gMWU9ccvIYe0/eHVCYOlVmw0ibQx+odQTnYEaAjLP9A==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Package.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="LoadStudentData.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Package.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="LoadStudentData.dtsx">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">{26090FA4-FD61-457E-B045-4CDCE3796630}</SSIS:Property>
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
