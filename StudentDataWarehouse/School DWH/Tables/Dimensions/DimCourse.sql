@@ -4,5 +4,5 @@
 	[CourseId] INT NOT NULL,
 	[SchoolId] INT NOT NULL,
 	[CourseName] INT NOT NULL,
-	FOREIGN KEY(SCHOOLID) REFERENCES SCHOOL(SCHOOLID)
+	CONSTRAINT [FK_DimCourse_School_SchoolId] FOREIGN KEY([SchoolId]) REFERENCES DimSchool([SchoolId])
 )
