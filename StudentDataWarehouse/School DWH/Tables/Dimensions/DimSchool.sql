@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[School]
+﻿CREATE TABLE [dbo].[DimSchool]
 (
 	[SchoolId] INT NOT NULL PRIMARY KEY IDENTITY(2000,1),
 	[SchoolName] VARCHAR(30) NOT NULL

@@ -62,13 +62,14 @@
     <Folder Include="Tables\Facts" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\Dimensions\Date.sql" />
-    <Build Include="Tables\Dimensions\Student.sql" />
-    <Build Include="Tables\Dimensions\Region.sql" />
-    <Build Include="Tables\Dimensions\Course.sql" />
-    <Build Include="Tables\Dimensions\School.sql" />
-    <Build Include="Tables\Facts\GradePoint.sql" />
-    <Build Include="Tables\Facts\Admits.sql" />
-    <Build Include="Tables\Facts\RegionalStats.sql" />
+    <Build Include="Tables\Dimensions\DimStudent.sql" />
+    <Build Include="Tables\Dimensions\DimRegion.sql" />
+    <Build Include="Tables\Dimensions\DimCourse.sql" />
+    <Build Include="Tables\Dimensions\DimSchool.sql" />
+    <Build Include="Tables\Facts\FactGradePoint.sql" />
+    <Build Include="Tables\Facts\FactAdmits.sql" />
+    <Build Include="Tables\Facts\FactRegionalStats.sql" />
+    <Build Include="Tables\Dimensions\DimAddress.sql" />
+    <Build Include="Tables\Dimensions\DimContact.sql" />
   </ItemGroup>
 </Project>

@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Address]
 (
 	[AddressId] INT NOT NULL PRIMARY KEY IDENTITY(1000,1), 
-    [StudentId] INT NOT NULL, 
+    [StudentId] INT NOT NULL UNIQUE, 
     [Street] VARCHAR(30) NULL, 
     [City] VARCHAR(30) NULL, 
     [Province] VARCHAR(20) NULL, 

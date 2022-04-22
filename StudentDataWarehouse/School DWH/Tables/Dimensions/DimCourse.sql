@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Course]
+﻿CREATE TABLE [dbo].[DimCourse]
 (
 	[CId] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[CourseId] INT NOT NULL,

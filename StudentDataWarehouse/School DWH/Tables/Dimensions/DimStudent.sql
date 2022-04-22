@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Student]
+﻿CREATE TABLE [dbo].[DimStudent]
 (
 	[StudentId] INT NOT NULL PRIMARY KEY,
 	[FirstName] VARCHAR(20) NOT NULL,
@@ -8,7 +8,7 @@
 	[Gender] VARCHAR(1) NOT NULL,
 	[SchoolName] INT NOT NULL,
 	[City] INT NOT NULL,
-	[DateOfBirth] INT NOT NULL,
-	[DateOfAdmission] INT NOT NULL,
+	[DateOfBirth] DATETIME NOT NULL,
+	[DateOfAdmission] DATETIME NOT NULL,
 	[DataValid] BIT NOT NULL DEFAULT 1
 )

@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Region]
+﻿CREATE TABLE [dbo].[DimRegion]
 (
 	[RegionId] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[City] VARCHAR(20) NOT NULL,
