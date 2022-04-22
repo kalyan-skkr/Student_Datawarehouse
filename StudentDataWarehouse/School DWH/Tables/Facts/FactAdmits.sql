@@ -1,8 +1,8 @@
-﻿CREATE TABLE [dbo].[Admits]
+﻿CREATE TABLE [dbo].[FactAdmits]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	[SchoolId] INT NOT NULL,
+	[ID] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[SchoolID] INT NOT NULL,
 	[YearlyAdmit] INT NOT NULL,
 	[StatsExpired] BIT NOT NULL DEFAULT 0,
-	CONSTRAINT [FK_FactAdmits_School_SchoolId] FOREIGN KEY([SchoolId]) REFERENCES DimSchool([SchoolId]),
+	CONSTRAINT [FK_FactAdmits_School_SchoolID] FOREIGN KEY([SchoolID]) REFERENCES DimSchool([SchoolID]),
 )

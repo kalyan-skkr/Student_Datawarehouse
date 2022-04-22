@@ -1,12 +1,12 @@
 ﻿CREATE TABLE [dbo].[CourseEnrollment]
 (
-	[CourseEnrollmentId] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
-    [CourseId] INT NOT NULL, 
-    [StudentId] INT NOT NULL, 
+	[CourseEnrollmentID] INT NOT NULL PRIMARY KEY IDENTITY(1,1), 
+    [CourseID] INT NOT NULL, 
+    [StudentID] INT NOT NULL, 
     [Grade] DECIMAL NULL, 
     [CourseCompletion] BIT NULL DEFAULT 0, 
-    CONSTRAINT [FK_CourseEnrollment_Course_CourseId] FOREIGN KEY ([CourseId]) REFERENCES [Course]([CourseId]), 
-    CONSTRAINT [FK_CourseEnrollment_Student_StudentId] FOREIGN KEY ([StudentId]) REFERENCES [Student]([StudentId]),
+    CONSTRAINT [FK_CourseEnrollment_Course_CourseID] FOREIGN KEY ([CourseID]) REFERENCES [Course]([CourseID]), 
+    CONSTRAINT [FK_CourseEnrollment_Student_StudentID] FOREIGN KEY ([StudentID]) REFERENCES [Student]([StudentID]),
 )
 
 GO
