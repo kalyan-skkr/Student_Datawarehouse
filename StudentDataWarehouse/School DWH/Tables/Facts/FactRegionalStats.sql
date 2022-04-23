@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[RegionalStats]
+﻿CREATE TABLE [dbo].[FactRegionalStats]
 (
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[RegionId] INT NOT NULL,

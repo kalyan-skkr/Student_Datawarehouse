@@ -1,7 +1,6 @@
 ﻿CREATE TABLE [dbo].[DimStudent]
 (
-	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	[StudentId] INT NOT NULL,
+	[StudentId] INT PRIMARY KEY,
 	[FirstName] VARCHAR(20) NOT NULL,
 	[MiddleName] VARCHAR(20) NOT NULL,
 	[LastName] VARCHAR(20) NOT NULL,
