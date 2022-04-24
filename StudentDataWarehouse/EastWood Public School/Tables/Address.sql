@@ -2,10 +2,10 @@
 (
 	[AddressId] INT NOT NULL PRIMARY KEY IDENTITY(1000,1), 
     [StudentId] INT NOT NULL, 
-    [Street] VARCHAR(30) NULL, 
-    [City] VARCHAR(30) NULL, 
-    [Province] VARCHAR(20) NULL, 
-    [Country] VARCHAR(20) NULL,
+    [Street] NVARCHAR(20) NOT NULL, 
+    [City] NVARCHAR (20) NOT NULL, 
+    [Province] VARCHAR(20) NOT NULL, 
+    [Country] NVARCHAR(20) NOT NULL,
     FOREIGN KEY(STUDENTID) REFERENCES STUDENT(STUDENTID)
 )
 
