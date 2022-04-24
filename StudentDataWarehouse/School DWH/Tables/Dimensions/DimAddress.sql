@@ -5,6 +5,5 @@
 	[Street] VARCHAR(20) NOT NULL,
 	[RegionId] INT NOT NULL
 
-	CONSTRAINT [FK_DimAddress_Student_StudentId] FOREIGN KEY([StudentId]) REFERENCES DimStudent([StudentId]),
 	CONSTRAINT [FK_DimAddress_Region_RegionId] FOREIGN KEY([RegionId]) REFERENCES DimRegion([RegionId])
 )

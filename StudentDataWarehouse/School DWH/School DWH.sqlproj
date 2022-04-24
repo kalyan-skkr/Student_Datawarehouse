@@ -69,7 +69,6 @@
     <Build Include="Tables\Dimensions\DimCourse.sql" />
     <Build Include="Tables\Dimensions\DimSchool.sql" />
     <Build Include="Tables\Facts\FactGradePoint.sql" />
-    <Build Include="Tables\Facts\FactAdmits.sql" />
     <Build Include="Tables\Facts\FactRegionalStats.sql" />
     <Build Include="Tables\Dimensions\DimAddress.sql" />
     <Build Include="Tables\Dimensions\DimContact.sql" />
