@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="44"
-  DTS:VersionGUID="{8300603A-AA7D-497C-B6C4-9D7BA93156C2}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{6194AD52-4163-42E1-8DFB-95F771E09286}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -347,7 +347,7 @@
                     <inputColumn
                       refId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CourseName]"
                       cachedDataType="wstr"
-                      cachedLength="20"
+                      cachedLength="50"
                       cachedName="CourseName"
                       externalMetadataColumnId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
                       lineageId="Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]" />
@@ -481,7 +481,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
-                      length="20"
+                      length="50"
                       lineageId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseName]"
                       name="CourseName"
                       truncationRowDisposition="FailComponent" />
@@ -495,7 +495,7 @@
                     <externalMetadataColumn
                       refId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       name="CourseName" />
                   </externalMetadataColumns>
                 </output>
@@ -512,7 +512,7 @@
                     <outputColumn
                       refId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CourseName]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       lineageId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CourseName]"
                       name="CourseName" />
                     <outputColumn
@@ -604,8 +604,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CourseName]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
@@ -622,8 +621,7 @@
                       name="CourseId" />
                     <externalMetadataColumn
                       refId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="50"
                       name="CourseName" />
                   </externalMetadataColumns>
@@ -640,8 +638,7 @@
                       name="CourseId" />
                     <outputColumn
                       refId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CourseName]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="50"
                       lineageId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CourseName]"
                       name="CourseName" />
@@ -690,7 +687,7 @@
                     <inputColumn
                       refId="Package\Stage Course\Union All.Inputs[Union All Input 1].Columns[CourseName]"
                       cachedDataType="wstr"
-                      cachedLength="20"
+                      cachedLength="50"
                       cachedName="CourseName"
                       lineageId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseName]">
                       <properties>
@@ -736,6 +733,20 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Stage Course\Union All.Inputs[Union All Input 2].Columns[CourseName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CourseName"
+                      lineageId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CourseName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Stage Course\Union All.Inputs[Union All Input 2].Columns[SchoolId]"
                       cachedDataType="i4"
                       cachedName="SchoolId"
@@ -772,7 +783,7 @@
                     <outputColumn
                       refId="Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       lineageId="Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]"
                       name="CourseName" />
                     <outputColumn
@@ -5359,39 +5370,51 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package\Stage Course\OLE DB Source 1"
-          TopLeft="398,61" />
+          Size="174.666666666667,42.6666666666667"
+          Id="Package\Stage Course\OLE DB Destination"
+          TopLeft="316,408" />
         <NodeLayout
           Size="165.333333333334,42.6666666666667"
           Id="Package\Stage Course\Derived Column 1"
           TopLeft="404,183" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Stage Course\OLE DB Source"
-          TopLeft="142,59" />
-        <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\Stage Course\OLE DB Destination"
-          TopLeft="316,408" />
-        <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\Stage Course\Derived Column"
-          TopLeft="149,191" />
+          TopLeft="148,193" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Stage Course\OLE DB Source"
+          TopLeft="123,54" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Stage Course\OLE DB Source 1"
+          TopLeft="405,76" />
         <EdgeLayout
-          Id="Package\Stage Course.Paths[OLE DB Source Output1]"
-          TopLeft="483.333333333333,103.666666666667">
+          Id="Package\Stage Course.Paths[OLE DB Source Output]"
+          TopLeft="200.333333333333,96.6666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,79.3333333333333"
+              EndConnector="25.6666666666667,96.3333333333334"
               Start="0,0"
-              End="0,71.8333333333333">
+              End="25.6666666666667,88.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.8333333333333" />
+                    End="0,44.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.1666666666667"
+                    Point2="0,48.1666666666667"
+                    Point3="4,48.1666666666667" />
+                  <mssgle:LineSegment
+                    End="21.6666666666667,48.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.6666666666667,48.1666666666667"
+                    Point2="25.6666666666667,48.1666666666667"
+                    Point3="25.6666666666667,52.1666666666667" />
+                  <mssgle:LineSegment
+                    End="25.6666666666667,88.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5401,19 +5424,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stage Course.Paths[OLE DB Source Output]"
-          TopLeft="223.166666666667,101.666666666667">
+          Id="Package\Stage Course.Paths[OLE DB Source Output1]"
+          TopLeft="484.5,118.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,89.3333333333333"
+              EndConnector="0,64.3333333333333"
               Start="0,0"
-              End="0,81.8333333333333">
+              End="0,56.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.8333333333333" />
+                    End="0,56.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5425,33 +5448,33 @@
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\Stage Course\Union All"
-          TopLeft="363.124994589016,303.210528672567" />
+          TopLeft="352,303" />
         <EdgeLayout
           Id="Package\Stage Course.Paths[Derived Column Output]"
-          TopLeft="227,233.666666666667">
+          TopLeft="226,235.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="197.458327922349,69.5438620059004"
+              EndConnector="187.333333333333,67.3333333333333"
               Start="0,0"
-              End="197.458327922349,62.0438620059004">
+              End="187.333333333333,59.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.7719310029502" />
+                    End="0,29.6666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.7719310029502"
-                    Point2="0,34.7719310029502"
-                    Point3="4,34.7719310029502" />
+                    Point1="0,29.6666666666667"
+                    Point2="0,33.6666666666667"
+                    Point3="4,33.6666666666667" />
                   <mssgle:LineSegment
-                    End="193.458327922349,34.7719310029502" />
+                    End="183.333333333333,33.6666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="193.458327922349,34.7719310029502"
-                    Point2="197.458327922349,34.7719310029502"
-                    Point3="197.458327922349,38.7719310029502" />
+                    Point1="183.333333333333,33.6666666666667"
+                    Point2="187.333333333333,33.6666666666667"
+                    Point3="187.333333333333,37.6666666666667" />
                   <mssgle:LineSegment
-                    End="197.458327922349,62.0438620059004" />
+                    End="187.333333333333,59.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5466,26 +5489,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-43.0972276332063,77.5438620059004"
+              EndConnector="-54.2222222222222,77.3333333333333"
               Start="0,0"
-              End="-43.0972276332063,70.0438620059004">
+              End="-54.2222222222222,69.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.9272659090741" />
+                    End="0,41.8025751072962" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.9272659090741"
-                    Point2="0,45.9272659090741"
-                    Point3="-4,45.9272659090741" />
+                    Point1="0,41.8025751072962"
+                    Point2="0,45.8025751072962"
+                    Point3="-4,45.8025751072962" />
                   <mssgle:LineSegment
-                    End="-39.0972276332063,45.9272659090741" />
+                    End="-50.2222222222222,45.8025751072962" />
                   <mssgle:CubicBezierSegment
-                    Point1="-39.0972276332063,45.9272659090741"
-                    Point2="-43.0972276332063,45.9272659090741"
-                    Point3="-43.0972276332063,49.9272659090741" />
+                    Point1="-50.2222222222222,45.8025751072962"
+                    Point2="-54.2222222222222,45.8025751072962"
+                    Point3="-54.2222222222222,49.8025751072962" />
                   <mssgle:LineSegment
-                    End="-43.0972276332063,70.0438620059004" />
+                    End="-54.2222222222222,69.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5496,30 +5519,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Course.Paths[Union All Output 1]"
-          TopLeft="424.458327922349,345.877195339234">
+          TopLeft="413.333333333333,345.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.1249945890159,62.1228046607662"
+              EndConnector="-10,62.3333333333333"
               Start="0,0"
-              End="-21.1249945890159,54.6228046607662">
+              End="-10,54.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.0614023303831" />
+                    End="0,27.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.0614023303831"
-                    Point2="0,31.0614023303831"
-                    Point3="-4,31.0614023303831" />
+                    Point1="0,27.1666666666667"
+                    Point2="0,31.1666666666667"
+                    Point3="-4,31.1666666666667" />
                   <mssgle:LineSegment
-                    End="-17.1249945890159,31.0614023303831" />
+                    End="-6,31.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.1249945890159,31.0614023303831"
-                    Point2="-21.1249945890159,31.0614023303831"
-                    Point3="-21.1249945890159,35.0614023303831" />
+                    Point1="-6,31.1666666666667"
+                    Point2="-10,31.1666666666667"
+                    Point3="-10,35.1666666666667" />
                   <mssgle:LineSegment
-                    End="-21.1249945890159,54.6228046607662" />
+                    End="-10,54.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5531,32 +5554,6 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage Course\OLE DB Source 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage Course\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Stage Course\OLE DB Destination">
     <Properties>
@@ -5592,31 +5589,31 @@
           Id="Package\Stage GP\Union All"
           TopLeft="367,230" />
         <EdgeLayout
-          Id="Package\Stage GP.Paths[OLE DB Source Output]"
-          TopLeft="229.333333333333,141.666666666667">
+          Id="Package\Stage GP.Paths[Union All Output 1]"
+          TopLeft="428.333333333333,272.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="199,88.3333333333333"
+              EndConnector="-23,55.3333333333334"
               Start="0,0"
-              End="199,80.8333333333333">
+              End="-23,47.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.1666666666667" />
+                    End="0,23.6666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,40.1666666666667"
-                    Point2="0,44.1666666666667"
-                    Point3="4,44.1666666666667" />
+                    Point1="0,23.6666666666667"
+                    Point2="0,27.6666666666667"
+                    Point3="-4,27.6666666666667" />
                   <mssgle:LineSegment
-                    End="195,44.1666666666667" />
+                    End="-19,27.6666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="195,44.1666666666667"
-                    Point2="199,44.1666666666667"
-                    Point3="199,48.1666666666667" />
+                    Point1="-19,27.6666666666667"
+                    Point2="-23,27.6666666666667"
+                    Point3="-23,31.6666666666667" />
                   <mssgle:LineSegment
-                    End="199,80.8333333333333" />
+                    End="-23,47.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5660,31 +5657,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stage GP.Paths[Union All Output 1]"
-          TopLeft="428.333333333333,272.666666666667">
+          Id="Package\Stage GP.Paths[OLE DB Source Output]"
+          TopLeft="229.333333333333,141.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-23,55.3333333333334"
+              EndConnector="199,88.3333333333333"
               Start="0,0"
-              End="-23,47.8333333333334">
+              End="199,80.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.6666666666667" />
+                    End="0,40.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.6666666666667"
-                    Point2="0,27.6666666666667"
-                    Point3="-4,27.6666666666667" />
+                    Point1="0,40.1666666666667"
+                    Point2="0,44.1666666666667"
+                    Point3="4,44.1666666666667" />
                   <mssgle:LineSegment
-                    End="-19,27.6666666666667" />
+                    End="195,44.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="-19,27.6666666666667"
-                    Point2="-23,27.6666666666667"
-                    Point3="-23,31.6666666666667" />
+                    Point1="195,44.1666666666667"
+                    Point2="199,44.1666666666667"
+                    Point3="199,48.1666666666667" />
                   <mssgle:LineSegment
-                    End="-23,47.8333333333334" />
+                    End="199,80.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6261,6 +6258,32 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Stage Student\B Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Course\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Course\OLE DB Source 1">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

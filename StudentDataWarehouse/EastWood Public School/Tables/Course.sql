@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[Course]
 (
-	[CourseId] INT NOT NULL PRIMARY KEY IDENTITY(2000,1), 
-    [CourseName] VARCHAR(50) NULL
+	[CourseId] INT NOT NULL PRIMARY KEY IDENTITY(3000,1), 
+    [CourseName] NVARCHAR(50) NULL
 )
 
 GO
