@@ -71,5 +71,9 @@
     <Build Include="Tables\Facts\FactRegionalStats.sql" />
     <Build Include="Tables\Dimensions\DimAddress.sql" />
     <Build Include="Tables\Dimensions\DimContact.sql" />
+    <Build Include="Tables\Dimensions\DimGp.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="School DWH.refactorlog" />
   </ItemGroup>
 </Project>
