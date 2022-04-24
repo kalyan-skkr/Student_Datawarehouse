@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="44"
-  DTS:VersionGUID="{8300603A-AA7D-497C-B6C4-9D7BA93156C2}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{57B2895B-23AF-4A95-B713-3D0857CE7654}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=BelleWood Public School;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-5TU796Q\SQLEXPRESS;Initial Catalog=BelleWoodPublicSchool;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=EastWood Public School;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-5TU796Q\SQLEXPRESS;Initial Catalog=EastWoodPublicSchool;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -49,7 +49,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=localhost;Initial Catalog=School DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-5TU796Q\SQLEXPRESS;Initial Catalog=StudentDataWarehouse;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -347,7 +347,7 @@
                     <inputColumn
                       refId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CourseName]"
                       cachedDataType="wstr"
-                      cachedLength="20"
+                      cachedLength="50"
                       cachedName="CourseName"
                       externalMetadataColumnId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseName]"
                       lineageId="Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]" />
@@ -361,6 +361,10 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
+                      dataType="i4"
+                      name="Id" />
+                    <externalMetadataColumn
                       refId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CourseId]"
                       dataType="i4"
                       name="CourseId" />
@@ -373,10 +377,6 @@
                       dataType="wstr"
                       length="50"
                       name="CourseName" />
-                    <externalMetadataColumn
-                      refId="Package\Stage Course\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Id]"
-                      dataType="i4"
-                      name="Id" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -481,7 +481,7 @@
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
-                      length="20"
+                      length="50"
                       lineageId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseName]"
                       name="CourseName"
                       truncationRowDisposition="FailComponent" />
@@ -495,7 +495,7 @@
                     <externalMetadataColumn
                       refId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       name="CourseName" />
                   </externalMetadataColumns>
                 </output>
@@ -512,7 +512,7 @@
                     <outputColumn
                       refId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CourseName]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       lineageId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CourseName]"
                       name="CourseName" />
                     <outputColumn
@@ -604,8 +604,7 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CourseName]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
@@ -622,8 +621,7 @@
                       name="CourseId" />
                     <externalMetadataColumn
                       refId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[CourseName]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="50"
                       name="CourseName" />
                   </externalMetadataColumns>
@@ -640,8 +638,7 @@
                       name="CourseId" />
                     <outputColumn
                       refId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CourseName]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="wstr"
                       length="50"
                       lineageId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[CourseName]"
                       name="CourseName" />
@@ -690,7 +687,7 @@
                     <inputColumn
                       refId="Package\Stage Course\Union All.Inputs[Union All Input 1].Columns[CourseName]"
                       cachedDataType="wstr"
-                      cachedLength="20"
+                      cachedLength="50"
                       cachedName="CourseName"
                       lineageId="Package\Stage Course\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseName]">
                       <properties>
@@ -736,6 +733,20 @@
                       </properties>
                     </inputColumn>
                     <inputColumn
+                      refId="Package\Stage Course\Union All.Inputs[Union All Input 2].Columns[CourseName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="CourseName"
+                      lineageId="Package\Stage Course\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[CourseName]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
                       refId="Package\Stage Course\Union All.Inputs[Union All Input 2].Columns[SchoolId]"
                       cachedDataType="i4"
                       cachedName="SchoolId"
@@ -772,7 +783,7 @@
                     <outputColumn
                       refId="Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]"
                       dataType="wstr"
-                      length="20"
+                      length="50"
                       lineageId="Package\Stage Course\Union All.Outputs[Union All Output 1].Columns[CourseName]"
                       name="CourseName" />
                     <outputColumn
@@ -2088,7 +2099,8 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Stage Student\B Student.Outputs[OLE DB Source Output].Columns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage Student\B Student.Outputs[OLE DB Source Output].ExternalColumns[MobileNumber]"
@@ -2129,7 +2141,8 @@
                       name="DateOfBirth" />
                     <externalMetadataColumn
                       refId="Package\Stage Student\B Student.Outputs[OLE DB Source Output].ExternalColumns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="15"
                       name="MobileNumber" />
                   </externalMetadataColumns>
@@ -2175,7 +2188,8 @@
                       name="DateOfBirth" />
                     <outputColumn
                       refId="Package\Stage Student\B Student.Outputs[OLE DB Source Error Output].Columns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="15"
                       lineageId="Package\Stage Student\B Student.Outputs[OLE DB Source Error Output].Columns[MobileNumber]"
                       name="MobileNumber" />
@@ -2946,7 +2960,8 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Stage Student\E Student.Outputs[OLE DB Source Output].Columns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage Student\E Student.Outputs[OLE DB Source Output].ExternalColumns[MobileNumber]"
@@ -2987,7 +3002,8 @@
                       name="DateOfBirth" />
                     <externalMetadataColumn
                       refId="Package\Stage Student\E Student.Outputs[OLE DB Source Output].ExternalColumns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="15"
                       name="MobileNumber" />
                   </externalMetadataColumns>
@@ -3033,7 +3049,8 @@
                       name="DateOfBirth" />
                     <outputColumn
                       refId="Package\Stage Student\E Student.Outputs[OLE DB Source Error Output].Columns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="15"
                       lineageId="Package\Stage Student\E Student.Outputs[OLE DB Source Error Output].Columns[MobileNumber]"
                       name="MobileNumber" />
@@ -3123,7 +3140,8 @@
                       lineageId="Package\Stage Student\B Student.Outputs[OLE DB Source Output].Columns[DateOfBirth]" />
                     <inputColumn
                       refId="Package\Stage Student\Merge Join.Inputs[Merge Join Left Input].Columns[MobileNumber]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="15"
                       cachedName="MobileNumber"
                       lineageId="Package\Stage Student\B Student.Outputs[OLE DB Source Output].Columns[MobileNumber]" />
@@ -3259,7 +3277,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Stage Student\Merge Join.Outputs[Merge Join Output].Columns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="15"
                       lineageId="Package\Stage Student\Merge Join.Outputs[Merge Join Output].Columns[MobileNumber]"
                       name="MobileNumber">
@@ -3400,7 +3419,8 @@
                       lineageId="Package\Stage Student\Merge Join.Outputs[Merge Join Output].Columns[DateOfBirth]" />
                     <inputColumn
                       refId="Package\Stage Student\Merge Join 1.Inputs[Merge Join Left Input].Columns[MobileNumber]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="15"
                       cachedName="MobileNumber"
                       lineageId="Package\Stage Student\Merge Join.Outputs[Merge Join Output].Columns[MobileNumber]" />
@@ -3713,7 +3733,8 @@
                       lineageId="Package\Stage Student\E Student.Outputs[OLE DB Source Output].Columns[DateOfBirth]" />
                     <inputColumn
                       refId="Package\Stage Student\Merge Join 2.Inputs[Merge Join Left Input].Columns[MobileNumber]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="15"
                       cachedName="MobileNumber"
                       lineageId="Package\Stage Student\E Student.Outputs[OLE DB Source Output].Columns[MobileNumber]" />
@@ -3849,7 +3870,8 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Stage Student\Merge Join 2.Outputs[Merge Join Output].Columns[MobileNumber]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="15"
                       lineageId="Package\Stage Student\Merge Join 2.Outputs[Merge Join Output].Columns[MobileNumber]"
                       name="MobileNumber">
@@ -3990,7 +4012,8 @@
                       lineageId="Package\Stage Student\Merge Join 2.Outputs[Merge Join Output].Columns[DateOfBirth]" />
                     <inputColumn
                       refId="Package\Stage Student\Merge Join 3.Inputs[Merge Join Left Input].Columns[MobileNumber]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="15"
                       cachedName="MobileNumber"
                       lineageId="Package\Stage Student\Merge Join 2.Outputs[Merge Join Output].Columns[MobileNumber]" />
@@ -4374,19 +4397,6 @@
                       externalMetadataColumnId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateOfAdmission]"
                       lineageId="Package\Stage Student\Union All.Outputs[Union All Output 1].Columns[DateOfAdmission]" />
                     <inputColumn
-                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrentGrade]"
-                      cachedDataType="i4"
-                      cachedName="CurrentGrade"
-                      externalMetadataColumnId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[currentgrade]"
-                      lineageId="Package\Stage Student\Union All.Outputs[Union All Output 1].Columns[CurrentGrade]" />
-                    <inputColumn
-                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Street]"
-                      cachedDataType="wstr"
-                      cachedLength="20"
-                      cachedName="Street"
-                      externalMetadataColumnId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET]"
-                      lineageId="Package\Stage Student\Union All.Outputs[Union All Output 1].Columns[Street]" />
-                    <inputColumn
                       refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SchoolName]"
                       cachedDataType="wstr"
                       cachedLength="23"
@@ -4400,6 +4410,19 @@
                       cachedName="FullName"
                       externalMetadataColumnId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FullName]"
                       lineageId="Package\Stage Student\Union All.Outputs[Union All Output 1].Columns[FullName]" />
+                    <inputColumn
+                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Street]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Street"
+                      externalMetadataColumnId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
+                      lineageId="Package\Stage Student\Union All.Outputs[Union All Output 1].Columns[Street]" />
+                    <inputColumn
+                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrentGrade]"
+                      cachedDataType="i4"
+                      cachedName="CurrentGrade"
+                      externalMetadataColumnId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrentGrade]"
+                      lineageId="Package\Stage Student\Union All.Outputs[Union All Output 1].Columns[CurrentGrade]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4465,14 +4488,14 @@
                       length="15"
                       name="MobileNumber" />
                     <externalMetadataColumn
-                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[currentgrade]"
-                      dataType="i4"
-                      name="currentgrade" />
-                    <externalMetadataColumn
-                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[STREET]"
+                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Street]"
                       dataType="wstr"
                       length="20"
-                      name="STREET" />
+                      name="Street" />
+                    <externalMetadataColumn
+                      refId="Package\Stage Student\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrentGrade]"
+                      dataType="i4"
+                      name="CurrentGrade" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5191,31 +5214,31 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,42.4"
           Id="Package\DimSchool"
           TopLeft="347.499994821847,11.6315791663041" />
         <NodeLayout
-          Size="162.666666666667,42.6666666666667"
+          Size="162.4,42.4"
           Id="Package\Execute Dim SPs"
           TopLeft="326.874995129183,335.263164205234" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\Execute Fact SPs"
           TopLeft="324.999995157123,411.210534055808" />
         <NodeLayout
-          Size="145.333333333334,42.6666666666667"
+          Size="145.6,42.4"
           Id="Package\Stage Course"
           TopLeft="339.999994933606,171.052634798589" />
         <NodeLayout
-          Size="125.333333333334,42.6666666666667"
+          Size="125.6,42.4"
           Id="Package\Stage GP"
           TopLeft="348.124994812533,252.473688962717" />
         <NodeLayout
-          Size="146.666666666667,42.6666666666667"
+          Size="146.4,42.4"
           Id="Package\Stage Student"
           TopLeft="340.624994924292,84.1578963209057" />
         <NodeLayout
-          Size="196,42.6666666666667"
+          Size="196,42.4"
           Id="Package\Truncate Staging Tables"
           TopLeft="49.3749992642553,14.5789458358716" />
         <EdgeLayout
@@ -5359,23 +5382,19 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\Stage Course\OLE DB Source 1"
           TopLeft="398,61" />
         <NodeLayout
-          Size="165.333333333334,42.6666666666667"
+          Size="165.6,42.4"
           Id="Package\Stage Course\Derived Column 1"
           TopLeft="404,183" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Stage Course\OLE DB Source"
           TopLeft="142,59" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\Stage Course\OLE DB Destination"
-          TopLeft="316,408" />
-        <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,42.4"
           Id="Package\Stage Course\Derived Column"
           TopLeft="149,191" />
         <EdgeLayout
@@ -5423,35 +5442,39 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="122.666666666667,42.6666666666667"
+          Size="171.2,41.6"
+          Id="Package\Stage Course\OLE DB Destination"
+          TopLeft="298,393" />
+        <NodeLayout
+          Size="120,41.6"
           Id="Package\Stage Course\Union All"
-          TopLeft="363.124994589016,303.210528672567" />
+          TopLeft="306,286" />
         <EdgeLayout
           Id="Package\Stage Course.Paths[Derived Column Output]"
-          TopLeft="227,233.666666666667">
+          TopLeft="227,233.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="197.458327922349,69.5438620059004"
+              EndConnector="120.333333333333,52.6"
               Start="0,0"
-              End="197.458327922349,62.0438620059004">
+              End="120.333333333333,45.1">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.7719310029502" />
+                    End="0,27.1447368421053" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,30.7719310029502"
-                    Point2="0,34.7719310029502"
-                    Point3="4,34.7719310029502" />
+                    Point1="0,27.1447368421053"
+                    Point2="0,31.1447368421053"
+                    Point3="4,31.1447368421053" />
                   <mssgle:LineSegment
-                    End="193.458327922349,34.7719310029502" />
+                    End="116.333333333333,31.1447368421053" />
                   <mssgle:CubicBezierSegment
-                    Point1="193.458327922349,34.7719310029502"
-                    Point2="197.458327922349,34.7719310029502"
-                    Point3="197.458327922349,38.7719310029502" />
+                    Point1="116.333333333333,31.1447368421053"
+                    Point2="120.333333333333,31.1447368421053"
+                    Point3="120.333333333333,35.1447368421053" />
                   <mssgle:LineSegment
-                    End="197.458327922349,62.0438620059004" />
+                    End="120.333333333333,45.1" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5462,30 +5485,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Course.Paths[Derived Column Output1]"
-          TopLeft="486.666666666667,225.666666666667">
+          TopLeft="486.8,225.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-43.0972276332063,77.5438620059004"
+              EndConnector="-102.133333333333,60.6"
               Start="0,0"
-              End="-43.0972276332063,70.0438620059004">
+              End="-102.133333333333,53.1">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.9272659090741" />
+                    End="0,31.8815789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,41.9272659090741"
-                    Point2="0,45.9272659090741"
-                    Point3="-4,45.9272659090741" />
+                    Point1="0,31.8815789473684"
+                    Point2="0,35.8815789473684"
+                    Point3="-4,35.8815789473684" />
                   <mssgle:LineSegment
-                    End="-39.0972276332063,45.9272659090741" />
+                    End="-98.1333333333334,35.8815789473684" />
                   <mssgle:CubicBezierSegment
-                    Point1="-39.0972276332063,45.9272659090741"
-                    Point2="-43.0972276332063,45.9272659090741"
-                    Point3="-43.0972276332063,49.9272659090741" />
+                    Point1="-98.1333333333334,35.8815789473684"
+                    Point2="-102.133333333333,35.8815789473684"
+                    Point3="-102.133333333333,39.8815789473684" />
                   <mssgle:LineSegment
-                    End="-43.0972276332063,70.0438620059004" />
+                    End="-102.133333333333,53.1" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5496,30 +5519,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Course.Paths[Union All Output 1]"
-          TopLeft="424.458327922349,345.877195339234">
+          TopLeft="366,327.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-21.1249945890159,62.1228046607662"
+              EndConnector="17.6,65.4"
               Start="0,0"
-              End="-21.1249945890159,54.6228046607662">
+              End="17.6,57.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.0614023303831" />
+                    End="0,28.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,27.0614023303831"
-                    Point2="0,31.0614023303831"
-                    Point3="-4,31.0614023303831" />
+                    Point1="0,28.7"
+                    Point2="0,32.7"
+                    Point3="4,32.7" />
                   <mssgle:LineSegment
-                    End="-17.1249945890159,31.0614023303831" />
+                    End="13.6,32.7" />
                   <mssgle:CubicBezierSegment
-                    Point1="-17.1249945890159,31.0614023303831"
-                    Point2="-21.1249945890159,31.0614023303831"
-                    Point3="-21.1249945890159,35.0614023303831" />
+                    Point1="13.6,32.7"
+                    Point2="17.6,32.7"
+                    Point3="17.6,36.7" />
                   <mssgle:LineSegment
-                    End="-21.1249945890159,54.6228046607662" />
+                    End="17.6,57.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5557,66 +5580,53 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage Course\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Stage GP">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\Stage GP\OLE DB Source 1"
           TopLeft="447,106" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Stage GP\OLE DB Source"
           TopLeft="152,99" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="174.4,42.4"
           Id="Package\Stage GP\OLE DB Destination"
           TopLeft="318,328" />
         <NodeLayout
-          Size="122.666666666667,42.6666666666667"
+          Size="122.4,42.4"
           Id="Package\Stage GP\Union All"
           TopLeft="367,230" />
         <EdgeLayout
-          Id="Package\Stage GP.Paths[OLE DB Source Output]"
-          TopLeft="229.333333333333,141.666666666667">
+          Id="Package\Stage GP.Paths[Union All Output 1]"
+          TopLeft="428.333333333333,272.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="199,88.3333333333333"
+              EndConnector="-23,55.3333333333334"
               Start="0,0"
-              End="199,80.8333333333333">
+              End="-23,47.8333333333334">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.1666666666667" />
+                    End="0,23.6666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,40.1666666666667"
-                    Point2="0,44.1666666666667"
-                    Point3="4,44.1666666666667" />
+                    Point1="0,23.6666666666667"
+                    Point2="0,27.6666666666667"
+                    Point3="-4,27.6666666666667" />
                   <mssgle:LineSegment
-                    End="195,44.1666666666667" />
+                    End="-19,27.6666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="195,44.1666666666667"
-                    Point2="199,44.1666666666667"
-                    Point3="199,48.1666666666667" />
+                    Point1="-19,27.6666666666667"
+                    Point2="-23,27.6666666666667"
+                    Point3="-23,31.6666666666667" />
                   <mssgle:LineSegment
-                    End="199,80.8333333333333" />
+                    End="-23,47.8333333333334" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5660,31 +5670,31 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stage GP.Paths[Union All Output 1]"
-          TopLeft="428.333333333333,272.666666666667">
+          Id="Package\Stage GP.Paths[OLE DB Source Output]"
+          TopLeft="229.333333333333,141.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-23,55.3333333333334"
+              EndConnector="199,88.3333333333333"
               Start="0,0"
-              End="-23,47.8333333333334">
+              End="199,80.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.6666666666667" />
+                    End="0,40.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.6666666666667"
-                    Point2="0,27.6666666666667"
-                    Point3="-4,27.6666666666667" />
+                    Point1="0,40.1666666666667"
+                    Point2="0,44.1666666666667"
+                    Point3="4,44.1666666666667" />
                   <mssgle:LineSegment
-                    End="-19,27.6666666666667" />
+                    End="195,44.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="-19,27.6666666666667"
-                    Point2="-23,27.6666666666667"
-                    Point3="-23,31.6666666666667" />
+                    Point1="195,44.1666666666667"
+                    Point2="199,44.1666666666667"
+                    Point3="199,48.1666666666667" />
                   <mssgle:LineSegment
-                    End="-23,47.8333333333334" />
+                    End="199,80.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5741,59 +5751,59 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\Stage Student\B Admission"
           TopLeft="204.166666666667,235.833333333333" />
         <NodeLayout
-          Size="141.333333333334,43.3333333333334"
+          Size="141.6,43.2"
           Id="Package\Stage Student\Merge Join 3"
           TopLeft="430,250.555555555556" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="126.4,42.4"
           Id="Package\Stage Student\B Student"
           TopLeft="40.8333333333334,65.3333333333333" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,42.4"
           Id="Package\Stage Student\Derived Column"
           TopLeft="36.6666666666667,310.833333333333" />
         <NodeLayout
-          Size="141.333333333334,42.6666666666667"
+          Size="141.6,42.4"
           Id="Package\Stage Student\Merge Join 2"
           TopLeft="435.833333333333,176.388888888889" />
         <NodeLayout
-          Size="129.333333333334,42.6666666666667"
+          Size="129.6,42.4"
           Id="Package\Stage Student\E Address"
           TopLeft="590.555555555555,70.5555555555555" />
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\Stage Student\E Admission"
           TopLeft="649.444444444445,217.222222222222" />
         <NodeLayout
-          Size="141.333333333334,42.6666666666667"
+          Size="141.6,42.4"
           Id="Package\Stage Student\Merge Join 1"
           TopLeft="27.5,233.333333333333" />
         <NodeLayout
-          Size="122.666666666667,42.6666666666667"
+          Size="122.4,42.4"
           Id="Package\Stage Student\Union All"
           TopLeft="254.166666666667,387.5" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="126.4,42.4"
           Id="Package\Stage Student\E Student"
           TopLeft="400.833333333333,71.3888888888889" />
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,42.4"
           Id="Package\Stage Student\Merge Join"
           TopLeft="40,163.333333333333" />
         <NodeLayout
-          Size="165.333333333334,42.6666666666667"
+          Size="165.6,42.4"
           Id="Package\Stage Student\Derived Column 1"
           TopLeft="419.166666666667,324.722222222222" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="174.4,42.4"
           Id="Package\Stage Student\OLE DB Destination"
           TopLeft="221.666666666667,463.333333333333" />
         <NodeLayout
-          Size="129.333333333334,42.6666666666667"
+          Size="129.6,42.4"
           Id="Package\Stage Student\B Address"
           TopLeft="185.833333333333,71.6666666666666" />
         <EdgeLayout
@@ -6261,6 +6271,19 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Stage Student\B Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Course\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
