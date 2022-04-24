@@ -60,6 +60,7 @@
     <Folder Include="Views" />
     <Folder Include="Tables\Dimensions" />
     <Folder Include="Tables\Facts" />
+    <Folder Include="Tables\Stage" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Dimensions\DimStudent.sql" />
@@ -72,6 +73,9 @@
     <Build Include="Tables\Dimensions\DimAddress.sql" />
     <Build Include="Tables\Dimensions\DimContact.sql" />
     <Build Include="Tables\Dimensions\DimGp.sql" />
+    <Build Include="Tables\Stage\StageCourse.sql" />
+    <Build Include="Tables\Stage\StageStudent.sql" />
+    <Build Include="Tables\Stage\StageGp.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="School DWH.refactorlog" />
