@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{6194AD52-4163-42E1-8DFB-95F771E09286}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{86ED1BEC-7FB1-4FD2-83F4-4C396C711C48}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -842,6 +842,95 @@
           version="1">
           <components>
             <component
+              refId="Package\Stage GP\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Stage GP\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Stage GP\Conditional Split.Inputs[Conditional Split Input].Columns[CourseCompletion]"
+                      cachedDataType="bool"
+                      cachedName="CourseCompletion"
+                      lineageId="Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseCompletion]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Stage GP\Conditional Split.Outputs[Completed]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Completed"
+                  synchronousInputId="Package\Stage GP\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseCompletion]} ==  TRUE </property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">CourseCompletion ==  TRUE </property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Stage GP\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Stage GP\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Stage GP\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Stage GP\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Stage GP\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Stage GP\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Stage GP\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Stage GP\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Stage GP\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1355,77 +1444,10 @@
               version="1">
               <inputs>
                 <input
-                  refId="Package\Stage GP\Union All.Inputs[Union All Input 1]"
-                  name="Union All Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[CourseEnrollmentId]"
-                      cachedDataType="i4"
-                      cachedName="CourseEnrollmentId"
-                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseEnrollmentId]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseEnrollmentId]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[CourseId]"
-                      cachedDataType="i4"
-                      cachedName="CourseId"
-                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseId]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseId]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[StudentId]"
-                      cachedDataType="i4"
-                      cachedName="StudentId"
-                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[StudentId]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[StudentId]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[Grade]"
-                      cachedDataType="numeric"
-                      cachedName="Grade"
-                      cachedPrecision="5"
-                      cachedScale="2"
-                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[Grade]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[Grade]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[CourseCompletion]"
-                      cachedDataType="bool"
-                      cachedName="CourseCompletion"
-                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseCompletion]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseCompletion]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
+                  refId="Package\Stage GP\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
                   <externalMetadataColumns />
                 </input>
                 <input
@@ -1504,10 +1526,77 @@
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Stage GP\Union All.Inputs[Union All Input 3]"
-                  dangling="true"
-                  hasSideEffects="true"
-                  name="Union All Input 3">
+                  refId="Package\Stage GP\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[CourseEnrollmentId]"
+                      cachedDataType="i4"
+                      cachedName="CourseEnrollmentId"
+                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseEnrollmentId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseEnrollmentId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[CourseId]"
+                      cachedDataType="i4"
+                      cachedName="CourseId"
+                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[StudentId]"
+                      cachedDataType="i4"
+                      cachedName="StudentId"
+                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[StudentId]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[StudentId]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[Grade]"
+                      cachedDataType="numeric"
+                      cachedName="Grade"
+                      cachedPrecision="5"
+                      cachedScale="2"
+                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[Grade]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[Grade]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage GP\Union All.Inputs[Union All Input 1].Columns[CourseCompletion]"
+                      cachedDataType="bool"
+                      cachedName="CourseCompletion"
+                      lineageId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output].Columns[CourseCompletion]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Stage GP\Union All.Outputs[Union All Output 1].Columns[CourseCompletion]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
@@ -1551,18 +1640,23 @@
           </components>
           <paths>
             <path
-              refId="Package\Stage GP.Paths[OLE DB Source Output]"
-              endId="Package\Stage GP\Union All.Inputs[Union All Input 1]"
-              name="OLE DB Source Output"
-              startId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output]" />
+              refId="Package\Stage GP.Paths[Completed]"
+              endId="Package\Stage GP\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Completed"
+              startId="Package\Stage GP\Conditional Split.Outputs[Completed]" />
             <path
-              refId="Package\Stage GP.Paths[OLE DB Source Output1]"
+              refId="Package\Stage GP.Paths[OLE DB Source Output]"
               endId="Package\Stage GP\Union All.Inputs[Union All Input 2]"
               name="OLE DB Source Output"
               startId="Package\Stage GP\OLE DB Source 1.Outputs[OLE DB Source Output]" />
             <path
+              refId="Package\Stage GP.Paths[OLE DB Source Output1]"
+              endId="Package\Stage GP\Union All.Inputs[Union All Input 1]"
+              name="OLE DB Source Output"
+              startId="Package\Stage GP\OLE DB Source.Outputs[OLE DB Source Output]" />
+            <path
               refId="Package\Stage GP.Paths[Union All Output 1]"
-              endId="Package\Stage GP\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              endId="Package\Stage GP\Conditional Split.Inputs[Conditional Split Input]"
               name="Union All Output 1"
               startId="Package\Stage GP\Union All.Outputs[Union All Output 1]" />
           </paths>
@@ -5571,7 +5665,7 @@
     design-time-name="Package\Stage GP">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Stage GP\OLE DB Source 1"
@@ -5583,47 +5677,13 @@
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\Stage GP\OLE DB Destination"
-          TopLeft="318,328" />
+          TopLeft="321,413" />
         <NodeLayout
           Size="122.666666666667,42.6666666666667"
           Id="Package\Stage GP\Union All"
           TopLeft="367,230" />
         <EdgeLayout
-          Id="Package\Stage GP.Paths[Union All Output 1]"
-          TopLeft="428.333333333333,272.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-23,55.3333333333334"
-              Start="0,0"
-              End="-23,47.8333333333334">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,23.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.6666666666667"
-                    Point2="0,27.6666666666667"
-                    Point3="-4,27.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-19,27.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-19,27.6666666666667"
-                    Point2="-23,27.6666666666667"
-                    Point3="-23,31.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-23,47.8333333333334" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stage GP.Paths[OLE DB Source Output1]"
+          Id="Package\Stage GP.Paths[OLE DB Source Output]"
           TopLeft="529,148.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5657,7 +5717,7 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stage GP.Paths[OLE DB Source Output]"
+          Id="Package\Stage GP.Paths[OLE DB Source Output1]"
           TopLeft="229.333333333333,141.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5688,6 +5748,80 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Stage GP\Conditional Split"
+          TopLeft="400,305" />
+        <EdgeLayout
+          Id="Package\Stage GP.Paths[Union All Output 1]"
+          TopLeft="428.333333333333,272.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.3333333333333,32.3333333333333"
+              Start="0,0"
+              End="50.3333333333333,24.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.1666666666667"
+                    Point2="0,16.1666666666667"
+                    Point3="4,16.1666666666667" />
+                  <mssgle:LineSegment
+                    End="46.3333333333333,16.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46.3333333333333,16.1666666666667"
+                    Point2="50.3333333333333,16.1666666666667"
+                    Point3="50.3333333333333,20.1666666666667" />
+                  <mssgle:LineSegment
+                    End="50.3333333333333,24.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage GP.Paths[Completed]"
+          TopLeft="478.666666666667,347.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-70.3333333333333,65.3333333333333"
+              Start="0,0"
+              End="-70.3333333333333,57.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6666666666666"
+                    Point2="0,32.6666666666666"
+                    Point3="-4,32.6666666666666" />
+                  <mssgle:LineSegment
+                    End="-66.3333333333333,32.6666666666666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.3333333333333,32.6666666666666"
+                    Point2="-70.3333333333333,32.6666666666666"
+                    Point3="-70.3333333333333,36.6666666666666" />
+                  <mssgle:LineSegment
+                    End="-70.3333333333333,57.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-59.1971744791667,37.6666666666666,48.061015625,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
