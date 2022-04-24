@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[DimAddress]
 (
-	[AddressId] INT NOT NULL PRIMARY KEY,
+	[AddressId] INT PRIMARY KEY IDENTITY(1,1),
 	[StudentId] INT NOT NULL,
 	[Street] VARCHAR(20) NOT NULL,
 	[RegionId] INT NOT NULL

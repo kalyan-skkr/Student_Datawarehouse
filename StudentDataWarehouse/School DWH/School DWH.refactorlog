@@ -14,4 +14,18 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="CurrentGrade" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="95216b0f-44e0-4a25-8a68-989bd0bcf8dd" ChangeDateTime="04/24/2022 18:19:53">
+    <Property Name="ElementName" Value="[dbo].[FactGradePoint].[City]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FactGradePoint]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="RegionId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ed8a6005-72f6-4cb3-89aa-141f9b878c9f" ChangeDateTime="04/24/2022 18:19:57">
+    <Property Name="ElementName" Value="[dbo].[FactGradePoint].[SchoolName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[FactGradePoint]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SchoolId" />
+  </Operation>
 </Operations>
