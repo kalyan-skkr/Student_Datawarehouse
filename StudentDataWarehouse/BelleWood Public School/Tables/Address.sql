@@ -2,7 +2,7 @@
 (
 	[AddressId] INT NOT NULL PRIMARY KEY IDENTITY(2000,1), 
     [StudentId] INT NOT NULL UNIQUE, 
-    [Street] VARCHAR(30) NOT NULL, 
+    [Street] NVARCHAR(20) NOT NULL, 
     [City] NVARCHAR(20) NOT NULL, 
     [Province] VARCHAR(20) NOT NULL, 
     [Country] NVARCHAR(20) NOT NULL,

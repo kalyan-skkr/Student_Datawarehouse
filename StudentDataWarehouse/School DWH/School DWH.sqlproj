@@ -61,6 +61,7 @@
     <Folder Include="Tables\Dimensions" />
     <Folder Include="Tables\Facts" />
     <Folder Include="Tables\Stage" />
+    <Folder Include="StoredProcedures" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Dimensions\DimStudent.sql" />
@@ -76,6 +77,7 @@
     <Build Include="Tables\Stage\StageCourse.sql" />
     <Build Include="Tables\Stage\StageStudent.sql" />
     <Build Include="Tables\Stage\StageGp.sql" />
+    <Build Include="StoredProcedures\Update_Dimension_Tables.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="School DWH.refactorlog" />

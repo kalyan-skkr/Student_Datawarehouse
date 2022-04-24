@@ -7,4 +7,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Gp" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="800a566b-13ed-44ee-869f-274cc58ce455" ChangeDateTime="04/24/2022 05:05:16">
+    <Property Name="ElementName" Value="[dbo].[DimStudent].[DataValid]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DimStudent]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CurrentGrade" />
+  </Operation>
 </Operations>
