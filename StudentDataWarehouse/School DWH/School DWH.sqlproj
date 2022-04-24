@@ -78,6 +78,7 @@
     <Build Include="Tables\Stage\StageStudent.sql" />
     <Build Include="Tables\Stage\StageGp.sql" />
     <Build Include="StoredProcedures\Update_Dimension_Tables.sql" />
+    <Build Include="StoredProcedures\UPDATE_FACT_TABLES.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="School DWH.refactorlog" />
