@@ -4,6 +4,5 @@
     [StudentId] INT NOT NULL, 
     [CourseId] INT NOT NULL, 
     [Gp] DECIMAL(5,2) NOT NULL,
-    CONSTRAINT [FK_DimGp_Student_StudentId] FOREIGN KEY([StudentId]) REFERENCES DimStudent([StudentId]),
-    CONSTRAINT [FK_DimGp_Course_CourseId] FOREIGN KEY([CourseId]) REFERENCES DimCourse([CId])
+    CONSTRAINT [FK_DimGp_Student_StudentId] FOREIGN KEY([StudentId]) REFERENCES DimStudent([StudentId])
 )

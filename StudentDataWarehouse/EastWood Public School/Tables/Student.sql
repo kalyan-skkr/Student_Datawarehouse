@@ -6,7 +6,7 @@
     [LastName] NVARCHAR (50) NOT NULL, 
     [Gender] NVARCHAR(1) NOT NULL, 
     [DateOfBirth] DATE NOT NULL,
-    [MobileNumber] VARCHAR(15) NOT NULL
+    [MobileNumber] NVARCHAR(15) NOT NULL
 )
 
 
