@@ -78,6 +78,9 @@
     <Build Include="Tables\Stage\StageGp.sql" />
     <Build Include="StoredProcedures\Update_Dimension_Tables.sql" />
     <Build Include="StoredProcedures\UpdateFactTables.sql" />
+    <Build Include="StoredProcedures\ssp_LoadStudentInfoBasedOnGrade.sql" />
+    <Build Include="StoredProcedures\ssp_LoadStudentInfoBasedOnRegion.sql" />
+    <Build Include="Views\view_FactGradePoint.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="School DWH.refactorlog" />
